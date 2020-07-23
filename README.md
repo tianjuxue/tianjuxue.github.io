@@ -1,2 +1,2 @@
 # txue.github.io
-Repository for Tyler Tianju Xue's academic research website.
+Repository for Tianju Xue's academic research website.
