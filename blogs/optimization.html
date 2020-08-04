@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+    p {
+      font-size: 20px;
+      margin-right: 150px;
+      margin-left: 80px;
+      text-align: justify;
+    }
+    h1 {
+      margin-right: 150px;
+      margin-left: 80px;   
+      margin-bottom: 40px;   
+    }
+    math {
+      font-size: 20px;
+      margin-right: 150px;
+      margin-left: 80px;
+    }
+    </style>
+  </head>
+ 
+  <body>
+
+    <h1 style="text-align: center;">Optimization or discretization - which goes first?</h1>
+    <p>Numerical schemes like the Finite Element Method (FEM) or the Finite Difference Method (FDM) are often used to solve partial differential equations (PDEs). The original PDE problem searches for a (function) solution living in an <strong>infinite</strong> dimensional linear space. FEM or FDM simplies the problem and searches for a (vector) solution living in a <strong>finite</strong> dimensional linear space. In this discussion, we consider PDEs that originate from minimization of certain energy functional. These problems appear as optimization problems. With numerical methods like FEM, we discretize the optimization problem over an infinite dimensional space into a problem over a finite dimensional space, practically solvable. The question is: <em>When should we perform dicretization?</em> There is no absolute answer, but the timing of dicretization sheds light on different schemes and their specific formulations. </p> 
+    <p>Should we discretize the solution immediately after we write the energy functional, or after we derive the weak formulation, or after the strong formulation, or even after linearization (if we are dealing with nonlinear PDEs)? The purpose of this note is to discuss different scenarios and help to understand the implementation of FEM better, from an engineering point of view with disclaimer of rigorous math. </p> 
+    <!-- <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mi>a</mi><mi>b</mi></mfrac></math> -->
+
+
+  </body>
+
+</html>
