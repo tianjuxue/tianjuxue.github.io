@@ -15,8 +15,8 @@
     }
     math {
       font-size: 20px;
-      margin-right: 150px;
-      margin-left: 80px;
+      margin-right: 5px;
+      margin-left: 5px;
     }
     </style>
   </head>
@@ -27,6 +27,14 @@
     <p>Numerical schemes like the Finite Element Method (FEM) or the Finite Difference Method (FDM) are often used to solve partial differential equations (PDEs). The original PDE problem searches for a (function) solution living in an <strong>infinite</strong> dimensional linear space. FEM or FDM simplies the problem and searches for a (vector) solution living in a <strong>finite</strong> dimensional linear space. In this discussion, we consider PDEs that originate from minimization of certain energy functional. These problems appear as optimization problems. With numerical methods like FEM, we discretize the optimization problem over an infinite dimensional space into a problem over a finite dimensional space, practically solvable. The question is: <em>When should we perform dicretization?</em> There is no absolute answer, but the timing of dicretization sheds light on different schemes and their specific formulations. </p> 
     <p>Should we discretize the solution immediately after we write the energy functional, or after we derive the weak formulation, or after the strong formulation, or even after linearization (if we are dealing with nonlinear PDEs)? The purpose of this note is to discuss different scenarios and help to understand the implementation of FEM better, from an engineering point of view with disclaimer of rigorous math. </p> 
     <!-- <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mi>a</mi><mi>b</mi></mfrac></math> -->
+
+    <p>As a working example, we consider minimizing the following energy functional with the interpretation of trying to find a signed distance function:</p> 
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi mathvariant="script">E</mi><mo>(</mo><mi>u</mi><mo>)</mo><mo>=</mo><msub><mo>&#x222B;</mo><mi>&#x3A9;</mi></msub><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>(</mo><mo>|</mo><mo>&#x2207;</mo><mi>u</mi><mo>|</mo><mo>-</mo><mn>1</mn><msup><mo>)</mo><mn>2</mn></msup><mtext>d</mtext><mi>x</mi></math>
+<!-- 
+    <p style="text-align: left;"> where  ddd  <math><mrow><msup><mi>  a </mi><mn>2</mn></msup> <mo> + </mo> <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c </mi><mn>2</mn></msup> </mrow> </math>. ddd </p>  
+
+    <p>i.e, If a and b are the legs and c is the hypotenuse then<math><mrow><msup><mi>  a </mi><mn>2</mn></msup> <mo> + </mo> <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c </mi><mn>2</mn></msup> </mrow> </math>.</p> -->
 
 
   </body>
